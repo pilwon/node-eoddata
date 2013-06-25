@@ -1,0 +1,51 @@
+{
+  "name": "eoddata",
+  "description": "EODData client library for Node.js",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Pilwon Huh",
+    "email": "pilwon@gmail.com"
+  },
+  "homepage": "https://github.com/pilwon/node-eoddata",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pilwon/node-eoddata.git"
+  },
+  "keywords": [
+    "eoddata",
+    "finance",
+    "financial",
+    "data",
+    "stock",
+    "price",
+    "historical",
+    "eod",
+    "end-of-day",
+    "client",
+    "library"
+  ],
+  "dependencies": {
+    "async": "~0.2.9",
+    "colors": "~0.6.0-1",
+    "debug": "~0.7.2",
+    "lodash": "~1.0.1",
+    "moment": "~2.0.0",
+    "request": "~2.16.6",
+    "xml2js": "~0.2.8"
+  },
+  "devDependencies": {
+    "chai": "~1.5.0",
+    "colors": "~0.6.0-1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.3.0",
+    "grunt-mocha-test": "~0.2.2",
+    "grunt-regarde": "~0.1.1",
+    "matchdep": "~0.1.2",
+    "mocha": "~1.8.2"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "grunt test"
+  }
+}
