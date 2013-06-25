@@ -9,7 +9,9 @@ require('colors');
 var _ = require('lodash'),
     moment = require('moment');
 
-var EXCHANGE = 'NASDAQ',
+var USERNAME = '<EODDATA_USERNAME>',
+    PASSWORD = '<EODDATA_PASSWORD>',
+    EXCHANGE = 'NASDAQ',
     SYMBOL = 'GOOG',
     SYMBOLS = ['GOOG', 'AAPL'],
     START_DATE = new Date('6/1/2013'),
@@ -17,8 +19,8 @@ var EXCHANGE = 'NASDAQ',
     PERIOD = 'h';
 
 var eoddata = new (require('..').Data)({
-  username: '<EODDATA_USERNAME>',
-  password: '<EODDATA_PASSWORD>'
+  username: USERNAME,
+  password: PASSWORD
 });
 
 eoddata.getCountryList(function (err, countries) {

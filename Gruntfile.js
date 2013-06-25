@@ -29,8 +29,7 @@ module.exports = function (grunt) {
     },
     watch: {  // grunt-regarde (task renamed from regarde to watch)
       all: {
-        files: '**/*',
-        tasks: 'test'
+        files: '**/*.js'
       }
     }
   });
