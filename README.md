@@ -19,7 +19,7 @@ var eoddata = new (require('eoddata').Data)({
 
 The client automatically handles token authentication therefore the following API calls can be made right away. All tasks are internally queued.
 
-- **Date Format:** JavaScript Date Object
+- **Date Format:** JavaScript Date Object or String format supported by [Moment.js](http://momentjs.com/docs/)
 - **Periods:** 1, 5, 10, 15, 30, h, d, w, m, q, y
 
 #### Country List
