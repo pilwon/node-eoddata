@@ -107,7 +107,7 @@ eoddata.getQuoteList2(exchangeCode, symbolCodes, function (err, quotes) {
 Returns a complete list of end of day quotes for an entire exchange and a specific date.
 
 ```js
-eoddata.QuoteListByDate(exchangeCode, quoteDate, function (err, quotes) {
+eoddata.getQuoteListByDate(exchangeCode, quoteDate, function (err, quotes) {
   // ...
 });
 ```
@@ -117,7 +117,7 @@ eoddata.QuoteListByDate(exchangeCode, quoteDate, function (err, quotes) {
 Returns a complete list of end of day quotes for an entire exchange and a specific date.
 
 ```js
-eoddata.QuoteListByDate2(exchangeCode, quoteDate, function (err, quotes) {
+eoddata.getQuoteListByDate2(exchangeCode, quoteDate, function (err, quotes) {
   // ...
 });
 ```
@@ -127,7 +127,7 @@ eoddata.QuoteListByDate2(exchangeCode, quoteDate, function (err, quotes) {
 Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 
 ```js
-eoddata.QuoteListByDatePeriod(exchangeCode, quoteDate, period, function (err, quotes) {
+eoddata.getQuoteListByDatePeriod(exchangeCode, quoteDate, period, function (err, quotes) {
   // ...
 });
 ```
@@ -137,7 +137,7 @@ eoddata.QuoteListByDatePeriod(exchangeCode, quoteDate, period, function (err, qu
 Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
 
 ```js
-eoddata.QuoteListByDatePeriod2(exchangeCode, quoteDate, period, function (err, quotes) {
+eoddata.getQuoteListByDatePeriod2(exchangeCode, quoteDate, period, function (err, quotes) {
   // ...
 });
 ```

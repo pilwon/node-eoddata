@@ -16,6 +16,7 @@ var USERNAME = '<EODDATA_USERNAME>',
     SYMBOLS = ['GOOG', 'AAPL'],
     START_DATE = new Date('6/1/2013'),
     END_DATE = new Date('6/24/2013'),
+    QUOTE_DATE = new Date('6/28/2013'),
     PERIOD = 'h';
 
 var eoddata = new (require('..').Data)({
@@ -83,6 +84,52 @@ eoddata.getQuoteList2(EXCHANGE, SYMBOLS, function (err, quotes) {
   });
 });
 
+eoddata.getQuoteListByDate(EXCHANGE, QUOTE_DATE, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Quote List by Date (%s, %s) ==='.cyan, EXCHANGE, moment(QUOTE_DATE).format('M/D/YYYY'));
+  _.keys(quotes).sort().forEach(function (code) {
+    console.log('%s: %s', code, JSON.stringify(quotes[code], null, 2));
+  });
+});
+
+eoddata.getQuoteListByDate2(EXCHANGE, QUOTE_DATE, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Quote List by Date 2 (%s, %s) ==='.cyan, EXCHANGE, moment(QUOTE_DATE).format('M/D/YYYY'));
+  _.keys(quotes).sort().forEach(function (code) {
+    console.log('%s: %s', code, JSON.stringify(quotes[code], null, 2));
+  });
+});
+
+eoddata.getQuoteListByDatePeriod(EXCHANGE, QUOTE_DATE, PERIOD, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Quote List by Date Period (%s, %s, %s) ==='.cyan, EXCHANGE, moment(QUOTE_DATE).format('M/D/YYYY'), PERIOD);
+  _.keys(quotes).sort().forEach(function (code) {
+    if (code !== SYMBOL) { return; }
+    console.log('%s: %s', code, JSON.stringify(quotes[code], null, 2));
+  });
+});
+
+eoddata.getQuoteListByDatePeriod2(EXCHANGE, QUOTE_DATE, PERIOD, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Quote List by Date Period 2 (%s, %s, %s) ==='.cyan, EXCHANGE, moment(QUOTE_DATE).format('M/D/YYYY'), PERIOD);
+  _.keys(quotes).sort().forEach(function (code) {
+    if (code !== SYMBOL) { return; }
+    console.log('%s: %s', code, JSON.stringify(quotes[code], null, 2));
+  });
+});
+
+eoddata.getSplitListByExchange(EXCHANGE, function (err, splits) {
+  if (err) { return console.error(err); }
+  console.log('=== Split List by Exchange (%s) ==='.cyan, EXCHANGE);
+  console.log(splits);
+});
+
+eoddata.getSplitListBySymbol(EXCHANGE, SYMBOL, function (err, splits) {
+  if (err) { return console.error(err); }
+  console.log('=== Split List by Symbol (%s:%s) ==='.cyan, EXCHANGE, SYMBOL);
+  console.log(splits);
+});
+
 eoddata.getSymbolChangesByExchange(EXCHANGE, function (err, symbolChanges) {
   if (err) { return console.error(err); }
   console.log('=== Symbol Changes by Exchange (%s) ==='.cyan, EXCHANGE);
@@ -135,5 +182,21 @@ eoddata.getTechnicalList(EXCHANGE, function (err, technicals) {
   console.log('=== Technical List (%s) ==='.cyan, EXCHANGE);
   _.keys(technicals).sort().forEach(function (code) {
     console.log('%s: %s', code, JSON.stringify(technicals[code], null, 2));
+  });
+});
+
+eoddata.getTop10Gains(EXCHANGE, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Top 10 Gains (%s) ==='.cyan, EXCHANGE);
+  quotes.forEach(function (quote, i) {
+    console.log('Top Gains #%d (+%d%): %s', i + 1, Math.round((quote.Close / quote.Previous - 1) * 100), JSON.stringify(quote, null, 2));
+  });
+});
+
+eoddata.getTop10Losses(EXCHANGE, function (err, quotes) {
+  if (err) { return console.error(err); }
+  console.log('=== Top 10 Losses (%s) ==='.cyan, EXCHANGE);
+  quotes.forEach(function (quote, i) {
+    console.log('Top Losses #%d (%d%): %s', i + 1, Math.round((quote.Close / quote.Previous - 1) * 100), JSON.stringify(quote, null, 2));
   });
 });
