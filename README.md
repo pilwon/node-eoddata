@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/eoddata.png?downloads=false&stars=false)](https://npmjs.org/package/eoddata) [![NPM](https://nodei.co/npm-dl/eoddata.png?months=6)](https://npmjs.org/package/eoddata)
+
 # EODData
 
 `eoddata` is a client library for [EODData Web Service](http://eoddata.com/) written in [Node.js](http://nodejs.org/).
