@@ -2,8 +2,9 @@
 # .npmignore
 #
 
-/examples/
+/.editorconfig
+/.gitattributes
+/.jshintrc
+/.npmignore
 /Gruntfile.js
-.jshintrc
-.gitattributes
-.editorconfig
+/examples/
