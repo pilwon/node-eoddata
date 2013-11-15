@@ -1,12 +1,15 @@
 [![NPM](https://nodei.co/npm/eoddata.png?downloads=false&stars=false)](https://npmjs.org/package/eoddata) [![NPM](https://nodei.co/npm-dl/eoddata.png?months=6)](https://npmjs.org/package/eoddata)
 
+
 # EODData
 
 `eoddata` is a client library for [EODData Web Service](http://eoddata.com/) written in [Node.js](http://nodejs.org/).
 
+
 ## Installation
 
     $ npm install eoddata
+
 
 ## Usage
 
@@ -17,12 +20,16 @@ var eoddata = new (require('eoddata').Data)({
 });
 ```
 
+* [See more comprehensive examples here.](https://github.com/pilwon/node-eoddata/tree/master/examples)
+
+
 ### API ([documentation](http://ws.eoddata.com/Data.asmx))
 
 The client automatically handles token authentication therefore the following API calls can be made right away. All tasks are internally queued.
 
 - **Date Format:** JavaScript Date Object or String format supported by [Moment.js](http://momentjs.com/docs/)
 - **Periods:** 1, 5, 10, 15, 30, h, d, w, m, q, y
+
 
 #### Country List
 
@@ -42,6 +49,7 @@ eoddata.getCountryList(function (err, countries) {
   // }
 });
 ```
+
 
 #### Data Formats
 
@@ -77,6 +85,7 @@ eoddata.getDataFormats(function (err, dataFormats) {
 });
 ```
 
+
 #### Exchange Get
 
 Returns detailed information of a specific exchange.
@@ -100,6 +109,7 @@ eoddata.getExchangeGet(exchangeCode, function (err, exchange) {
   // }
 });
 ```
+
 
 #### Exchange List
 
@@ -127,6 +137,7 @@ eoddata.getExchangeList(function (err, exchanges) {
   // }
 });
 ```
+
 
 #### Fundamental List
 
@@ -164,6 +175,7 @@ eoddata.getFundamentalList(exchangeCode, function (err, fundamentals) {
 });
 ```
 
+
 #### Quote Get
 
 Returns an end of day quote for a specific symbol.
@@ -192,6 +204,7 @@ eoddata.getQuoteGet(exchangeCode, symbolCode, function (err, quote) {
   // }
 });
 ```
+
 
 #### Quote List
 
@@ -225,6 +238,7 @@ eoddata.getQuoteList(exchangeCode, function (err, quotes) {
 });
 ```
 
+
 #### Quote List 2
 
 Returns end of day quotes for a list of symbols of a specific exchange.
@@ -235,6 +249,7 @@ eoddata.getQuoteList2(exchangeCode, symbolCodes, function (err, quotes) {
 });
 ```
 
+
 #### Quote List by Date
 
 Returns a complete list of end of day quotes for an entire exchange and a specific date.
@@ -244,6 +259,7 @@ eoddata.getQuoteListByDate(exchangeCode, quoteDate, function (err, quotes) {
   // Sample `quotes`: same as getQuoteList()
 });
 ```
+
 
 #### Quote List by Date 2
 
@@ -269,6 +285,7 @@ eoddata.getQuoteListByDate2(exchangeCode, quoteDate, function (err, quotes) {
   // }
 });
 ```
+
 
 #### Quote List by Date Period
 
@@ -305,6 +322,7 @@ eoddata.getQuoteListByDatePeriod(exchangeCode, quoteDate, period, function (err,
 });
 ```
 
+
 #### Quote List by Date Period 2
 
 Returns a complete list of end of day quotes for an entire exchange, specific date, and specific period.
@@ -333,6 +351,7 @@ eoddata.getQuoteListByDatePeriod2(exchangeCode, quoteDate, period, function (err
 });
 ```
 
+
 #### Split List by Exchange
 
 Returns a list of Splits of a specific exchange.
@@ -352,6 +371,7 @@ eoddata.getSplitListByExchange(exchangeCode, function (err, splits) {
 });
 ```
 
+
 #### Split List by Symbol
 
 Returns a list of Splits of a specific symbol.
@@ -361,6 +381,7 @@ eoddata.getSplitListBySymbol(exchangeCode, symbolCode, function (err, splits) {
   // Sample `splits`: same as getSplitListByExchange()
 });
 ```
+
 
 #### Symbol Changes by Exchange
 
@@ -382,6 +403,7 @@ eoddata.getSymbolChangesByExchange(exchangeCode, function (err, symbolChanges) {
 });
 ```
 
+
 #### Symbol Get
 
 Returns detailed information of a specific symbol.
@@ -397,6 +419,7 @@ eoddata.getSymbolGet(exchangeCode, symbolCode, function (err, symbol) {
   // }
 });
 ```
+
 
 #### Symbol History
 
@@ -430,6 +453,7 @@ eoddata.getSymbolHistory(exchangeCode, symbolCode, startDate, function (err, quo
 });
 ```
 
+
 #### Symbol History Period
 
 Returns a list of historical data of a specified symbol, specified date and specified period.
@@ -440,6 +464,7 @@ eoddata.getSymbolHistoryPeriod(exchangeCode, symbolCode, date, period, function 
 });
 ```
 
+
 #### Symbol History Period by Date Range
 
 Returns a list of historical data of a specified symbol, specified date range and specified period.
@@ -449,6 +474,7 @@ eoddata.getSymbolHistoryPeriodByDateRange(exchangeCode, symbolCode, startDate, e
   // Sample `quotes`: same as getSymbolHistory()
 });
 ```
+
 
 #### Symbol List 2
 
@@ -472,6 +498,7 @@ eoddata.getSymbolList2(exchangeCode, function (err, symbols) {
   // }
 });
 ```
+
 
 #### Technical List
 
@@ -533,6 +560,7 @@ eoddata.getTechnicalList(exchangeCode, function (err, technicals) {
 });
 ```
 
+
 #### Top 10 Gains
 
 Returns a list of the Top 10 Gains of a specified exchange.
@@ -565,6 +593,7 @@ eoddata.getTop10Gains(exchangeCode, function (err, quotes) {
 });
 ```
 
+
 #### Top 10 Losses
 
 Returns a list of the Top 10 Losses of a specified exchange.
@@ -575,9 +604,11 @@ eoddata.getTop10Losses(exchangeCode, function (err, quotes) {
 });
 ```
 
+
 ## Credits
 
   See the [contributors](https://github.com/pilwon/node-eoddata/graphs/contributors).
+
 
 ## License
 
