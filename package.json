@@ -1,7 +1,7 @@
 {
   "name": "eoddata",
   "description": "EODData client library for Node.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Pilwon Huh",
@@ -26,19 +26,20 @@
     "library"
   ],
   "dependencies": {
-    "async": "~0.2.9",
+    "async": "~0.2.10",
     "colors": "~0.6.2",
-    "debug": "~0.7.3",
-    "lodash": "~1.0.1",
-    "moment": "~2.0.0",
-    "request": "~2.16.6",
-    "xml2js": "~0.2.8"
+    "debug": "~0.7.4",
+    "lodash": "~2.4.1",
+    "moment": "~2.5.1",
+    "q": "~1.0.0",
+    "request": "~2.33.0",
+    "xml2js": "~0.4.1"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.3.0",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-watch": "~0.5.3",
-    "matchdep": "~0.1.2"
+    "matchdep": "~0.3.0"
   },
   "scripts": {
     "prepublish": "npm prune"

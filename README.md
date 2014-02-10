@@ -3,7 +3,7 @@
 
 # EODData
 
-`eoddata` is a client library for [EODData Web Service](http://eoddata.com/) written in [Node.js](http://nodejs.org/).
+`eoddata` is a client library for [EODData Web Service](http://eoddata.com/) written in [Node.js](http://nodejs.org/). This library returns the result in both callback & promise styles.
 
 
 ## Installation
@@ -26,6 +26,8 @@ var eoddata = new (require('eoddata').Data)({
 ### API ([documentation](http://ws.eoddata.com/Data.asmx))
 
 The client automatically handles token authentication therefore the following API calls can be made right away. All tasks are internally queued.
+
+All API functions accept callback as the last parameter. Whether you pass a callback function or not, they will always return a promise object built using Q. You can do whatever you want with the returned promise, or stick with the traditional callback style.
 
 - **Date Format:** JavaScript Date Object or String format supported by [Moment.js](http://momentjs.com/docs/)
 - **Periods:** 1, 5, 10, 15, 30, h, d, w, m, q, y
