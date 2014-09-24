@@ -8,9 +8,9 @@ var PASSWORD = '<EODDATA_PASSWORD>';
 var EXCHANGE = 'NASDAQ';
 var SYMBOL = 'GOOG';
 var SYMBOLS = ['GOOG', 'AAPL'];
-var START_DATE = new Date('6/1/2013');
-var END_DATE = new Date('6/24/2013');
-var QUOTE_DATE = new Date('6/28/2013');
+var START_DATE = new Date('9/15/2014');
+var END_DATE = new Date('9/24/2014');
+var QUOTE_DATE = new Date('9/23/2014');
 var PERIOD = 'h';
 
 var eoddata = new (require('..').Data)({
