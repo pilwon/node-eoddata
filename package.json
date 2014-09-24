@@ -26,19 +26,19 @@
     "library"
   ],
   "dependencies": {
-    "async": "~0.2.10",
+    "async": "^0.2.10",
     "colors": "~0.6.2",
-    "debug": "~0.7.4",
+    "debug": "^0.7.4",
     "lodash": "~2.4.1",
-    "moment": "~2.5.1",
-    "q": "~1.0.0",
-    "request": "~2.33.0",
-    "xml2js": "~0.4.1"
+    "moment": "^2.5.1",
+    "q": "^1.0.1",
+    "request": "^2.33.0",
+    "xml2js": "^0.4.4"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.8.0",
+    "grunt-contrib-watch": "^0.5.3",
     "matchdep": "~0.3.0"
   },
   "scripts": {
