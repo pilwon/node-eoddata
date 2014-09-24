@@ -25,7 +25,7 @@ var eoddata = new (require('eoddata').Data)({
 
 ### API ([documentation](http://ws.eoddata.com/Data.asmx))
 
-The client automatically handles token authentication therefore the following API calls can be made right away. All tasks are internally queued.
+The client automatically handles token authentication therefore the following API calls can be made right away.
 
 All API functions accept callback as the last parameter. Whether you pass a callback function or not, they will always return a promise object built using [Bluebird](https://github.com/petkaantonov/bluebird). You can do whatever you want with the returned promise, or stick with the traditional callback style.
 
