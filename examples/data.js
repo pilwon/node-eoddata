@@ -1,17 +1,17 @@
 require('colors');
 
-var _ = require('lodash'),
-    moment = require('moment');
+var _ = require('lodash');
+var moment = require('moment');
 
-var USERNAME = '<EODDATA_USERNAME>',
-    PASSWORD = '<EODDATA_PASSWORD>',
-    EXCHANGE = 'NASDAQ',
-    SYMBOL = 'GOOG',
-    SYMBOLS = ['GOOG', 'AAPL'],
-    START_DATE = new Date('6/1/2013'),
-    END_DATE = new Date('6/24/2013'),
-    QUOTE_DATE = new Date('6/28/2013'),
-    PERIOD = 'h';
+var USERNAME = '<EODDATA_USERNAME>';
+var PASSWORD = '<EODDATA_PASSWORD>';
+var EXCHANGE = 'NASDAQ';
+var SYMBOL = 'GOOG';
+var SYMBOLS = ['GOOG', 'AAPL'];
+var START_DATE = new Date('6/1/2013');
+var END_DATE = new Date('6/24/2013');
+var QUOTE_DATE = new Date('6/28/2013');
+var PERIOD = 'h';
 
 var eoddata = new (require('..').Data)({
   username: USERNAME,
