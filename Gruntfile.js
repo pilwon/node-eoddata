@@ -1,6 +1,7 @@
+var loadGruntTasks = require('load-grunt-tasks');
+
 module.exports = function (grunt) {
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  loadGruntTasks(grunt);
 
   // Project configuration.
   grunt.initConfig({

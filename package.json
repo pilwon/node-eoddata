@@ -39,7 +39,7 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.8.0",
     "grunt-contrib-watch": "^0.5.3",
-    "matchdep": "~0.3.0"
+    "load-grunt-tasks": "^0.6.0"
   },
   "scripts": {
     "prepublish": "npm prune"
