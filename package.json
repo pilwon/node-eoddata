@@ -1,7 +1,7 @@
 {
   "name": "eoddata",
   "description": "EODData client library for Node.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "author": {
     "name": "Pilwon Huh",
